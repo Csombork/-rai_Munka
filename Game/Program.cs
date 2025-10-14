@@ -1,34 +1,78 @@
-﻿using System.Runtime.InteropServices.JavaScript;
+﻿int pálya = 8;
 
-int hight = 8;
-int widht = 8;
-int jh = 0;
-int jw = 0;
+int minhight = 10;
+int minwidht = 40;
+
+int hight = minhight + pálya;
+int widht = minwidht + pálya;
+int jh = minhight;
+int jw = minwidht;
 
 Console.CursorVisible = false;
 
-while (true)
-{
-    var beolvasott = Console.ReadKey();
-    Console.Clear();
+Console.CursorLeft = minwidht;
+Console.CursorTop = minhight;
 
-    if (beolvasott.Key == ConsoleKey.S && jh < Console.WindowHeight - 1)
+for (int i = 0; i < pálya + 2; i++)
+{
+    Console.WriteLine();
+    for (int j = 0; j < pálya + 2; j++)
+    {
+        if (i == 0 || i == pálya + 1 || j == 0 || j == pálya + 1)
+        {
+
+            Console.Write("#");
+        }
+        else
+        {
+            Console.Write(" ");
+        }
+    }
+}
+
+
+while (true) 
+{ 
+    Console.CursorLeft = jw;
+    Console.CursorTop = jh;
+    Console.Write("X");
+
+    var beolvasott = Console.ReadKey(true);
+
+    Console.CursorLeft = jw;
+    Console.CursorTop = jh;
+    Console.Write(" ");
+
+    if (beolvasott.Key == ConsoleKey.S)
     {
         jh++;
     }
-    if (beolvasott.Key == ConsoleKey.W && jh > 0)
+    if (beolvasott.Key == ConsoleKey.W)
     {
         jh--;
     }
-    if (beolvasott.Key == ConsoleKey.A && jw > 0)
+    if (beolvasott.Key == ConsoleKey.A)
     {
         jw--;
     }
-    if (beolvasott.Key == ConsoleKey.D && jw < Console.WindowWidth - 1)
+    if (beolvasott.Key == ConsoleKey.D)
     {
         jw++;
     }
-    Console.CursorLeft = jw;
-    Console.CursorTop = jh;
-    Console.WriteLine("X");
+    if (beolvasott.Key == ConsoleKey.S && jh > hight)
+    {
+        jh = minhight;
+    }
+    if (beolvasott.Key == ConsoleKey.W && jh < minhight)
+    {
+        jh = hight;
+    }
+    if (beolvasott.Key == ConsoleKey.A && jw < minwidht)
+    {
+        jw = widht;
+    }
+    if (beolvasott.Key == ConsoleKey.D && jw > widht)
+    {
+        jw = minwidht;
+    }
 }
