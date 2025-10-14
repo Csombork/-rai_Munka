@@ -1,17 +1,17 @@
 ﻿int pálya = 8;
 
-int minhight = 10;
+int minheight = 10;
 int minwidht = 40;
 
-int hight = minhight + pálya;
-int widht = minwidht + pálya;
-int jh = minhight;
+int maxheight = minheight + pálya;
+int maxwidth = minwidht + pálya;
+int jh = minheight;
 int jw = minwidht;
 
 Console.CursorVisible = false;
 
+Console.CursorTop = minheight;
 Console.CursorLeft = minwidht;
-Console.CursorTop = minhight;
 
 for (int i = 0; i < pálya + 2; i++)
 {
@@ -59,19 +59,19 @@ while (true)
     {
         jw++;
     }
-    if (beolvasott.Key == ConsoleKey.S && jh > hight)
+    if (beolvasott.Key == ConsoleKey.S && jh > maxheight)
     {
-        jh = minhight;
+        jh = minheight;
     }
-    if (beolvasott.Key == ConsoleKey.W && jh < minhight)
+    if (beolvasott.Key == ConsoleKey.W && jh < minheight)
     {
-        jh = hight;
+        jh = maxheight;
     }
     if (beolvasott.Key == ConsoleKey.A && jw < minwidht)
     {
-        jw = widht;
+        jw = maxwidth;
     }
-    if (beolvasott.Key == ConsoleKey.D && jw > widht)
+    if (beolvasott.Key == ConsoleKey.D && jw > maxwidth)
     {
         jw = minwidht;
     }
