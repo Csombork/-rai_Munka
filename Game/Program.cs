@@ -15,7 +15,7 @@ Console.CursorTop = minhight;
 
 for (int i = 0; i < pálya + 2; i++)
 {
-    Console.WriteLine();
+    Console.Write("\n");
     for (int j = 0; j < pálya + 2; j++)
     {
         if (i == 0 || i == pálya + 1 || j == 0 || j == pálya + 1)
