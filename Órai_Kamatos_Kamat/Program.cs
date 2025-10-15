@@ -36,22 +36,38 @@ Console.Write("\nFérfi vagy vagy nő? ");
 string nem = Console.ReadLine();
 int nyughatár;
 
-if (nem == "férfi" || nem == "Férfi" || nem == "FÉRFI")
+if (nem == "férfi" || nem == "Férfi" || nem == "FÉRFI" || nem == "ferfi" || nem == "Ferfi" || nem == "FERFI")
 {
     nyughatár = 65 - év;
 }
-else
+else if (nem == "nő" || nem == "Nő" || nem == "NŐ" || nem == "no" || nem == "No" || nem == "NO")
 {
     nyughatár = 62 - év;
 }
+else
+{
+    nyughatár = 0;
+    Console.WriteLine("\nSorry, but így nyem fog műlködni :|");
+}
 
 double kamat = 1.065;
-Console.Write("\nMennyit fogsz fizetsz be havonta? ");
+Console.Write("\nMennyit fogsz befizetni havonta? ");
 double havibefiz = double.Parse(Console.ReadLine());
+double összeg = 0;
 
 for (int i = 0; i < nyughatár; i++)
 {
-    havibefiz *= kamat;
+    összeg += havibefiz * 12;
+    if (havibefiz * 12 * 0.2 <= 130_000)
+    {
+        összeg += havibefiz * 12 * 0.2;
+    }
+    else
+    {
+        összeg += 130_000;
+    }
+    összeg *= kamat;
 }
 
-Console.WriteLine($"\nEnnyit tudnál a nyugdíjig megtakarítani: {havibefiz}");
+Console.WriteLine($"\nEnnyit tudnál a nyugdíjig megtakarítani: {összeg}Ft");
+Console.WriteLine($"Ez összesen havonta kb {összeg / (12*20)}Ft lesz.");
