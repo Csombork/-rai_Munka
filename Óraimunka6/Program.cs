@@ -26,7 +26,6 @@ bool Pénzérme()
     {
         return true;
     }
-
     return false;
 }
 
