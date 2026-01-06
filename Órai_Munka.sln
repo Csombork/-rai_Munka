@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Óraimunka6", "Óraimunka6\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Órai7", "Órai7\Órai7.csproj", "{0C02E458-8DC3-42A8-B707-08F491A3EBBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Órai 8", "Órai 8\Órai 8.csproj", "{4789309A-32E0-4C6E-A2A8-E8DA2506D5C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0C02E458-8DC3-42A8-B707-08F491A3EBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C02E458-8DC3-42A8-B707-08F491A3EBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C02E458-8DC3-42A8-B707-08F491A3EBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4789309A-32E0-4C6E-A2A8-E8DA2506D5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4789309A-32E0-4C6E-A2A8-E8DA2506D5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4789309A-32E0-4C6E-A2A8-E8DA2506D5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4789309A-32E0-4C6E-A2A8-E8DA2506D5C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
