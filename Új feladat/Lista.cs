@@ -35,7 +35,7 @@ namespace Új_feladat
                 }
                 tomb = mentés;
             }
-            tomb[táelmszám + 1] = adat;
+            tomb[táelmszám] = adat;
             táelmszám++;
         }
 
