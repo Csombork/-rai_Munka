@@ -22,5 +22,26 @@ namespace Új_feladat
             this.táelmszám = 0;
             this.tomb = new int[kapacitás];
         }
+
+        public void Hozzáadás(int adat)
+        {
+            if (táelmszám + 1 > kapacitás)
+            {
+                kapacitás = kapacitás * 2;
+                int[] mentés = new int[kapacitás];
+                for (int i = 0; i < táelmszám; i++)
+                {
+                    mentés[i] = tomb[i]; 
+                }
+                tomb = mentés;
+            }
+            tomb[táelmszám + 1] = adat;
+            táelmszám++;
+        }
+
+        public int Kiír(int hanyelem)
+        {
+            return tomb[hanyelem];
+        }
     }
 }
